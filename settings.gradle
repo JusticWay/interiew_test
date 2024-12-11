@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "interview_cathaybk"
 include ':app'
+include ':base'
