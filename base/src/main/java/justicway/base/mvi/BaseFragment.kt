@@ -6,8 +6,6 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import justicway.base.log
-import justicway.base.structure.mvi.UiIntent
-import justicway.base.structure.mvi.UiState
 import kotlinx.coroutines.launch
 
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/StockFragment">
+
+    <fragment
+        android:id="@+id/StockFragment"
+        android:name="justicway.interview_cathaybk.ui.stock.StockFragment"
+        android:label="MainFragment">
+    </fragment>
+
+
+</navigation>
