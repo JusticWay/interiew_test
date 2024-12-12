@@ -4,20 +4,38 @@ import com.google.gson.annotations.SerializedName
 
 data class StockDailyInfoBO(
     val code: String,
-    val change: String,
-    val closingPrice: String,
-    val highestPrice: String,
-    val lowestPrice: String,
+    val change: Double,
+    val openingPrice: Double,
+    val highestPrice: Double,
+    val lowestPrice: Double,
+    val closingPrice: Double,
     val name: String,
-    val openingPrice: String,
-    val tradeValue: String,
-    val tradeVolume: String,
-    val transaction: String,
+    val tradeValue: Long,
+    val tradeVolume: Long,
+    val transaction: Long,
     //  bbu
-    val dividendYield: String,
-    val pbRatio: String,
-    val peRatio: String,
+    val dividendYield: Double,
+    val pbRatio: Double,
+    val peRatio: Double,
     // avg
-    val monthlyAveragePrice: String
-
-)
+    val monthlyAveragePrice: Double,
+){
+    fun isOverMonthlyAverage(
+        price: Double = closingPrice,
+    ): Boolean {
+        return try{
+            price > monthlyAveragePrice
+        } catch (e: NumberFormatException){
+            false
+        }
+    }
+    fun isLowerMonthlyAverage(
+        price: Double = closingPrice,
+    ): Boolean {
+        return try{
+            price < monthlyAveragePrice
+        } catch (e: NumberFormatException){
+            false
+        }
+    }
+}
