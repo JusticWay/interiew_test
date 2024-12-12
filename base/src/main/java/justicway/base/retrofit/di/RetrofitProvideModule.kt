@@ -41,9 +41,6 @@ class RetrofitProvideModule {
         val clientBuilder = OkHttpClient
             .Builder()
             .addInterceptor(authInterceptor)
-            .addInterceptor(
-                LoggingInterceptor.Builder().loggable(true).request().response().build()
-            )
 
 
         return Retrofit.Builder()
@@ -70,9 +67,6 @@ class RetrofitProvideModule {
         val clientBuilder = OkHttpClient
             .Builder()
             .addInterceptor(authInterceptor)
-            .addInterceptor(
-                LoggingInterceptor.Builder().loggable(true).request().response().build()
-            )
 
 
         return Retrofit.Builder()
@@ -99,9 +93,6 @@ class RetrofitProvideModule {
         val clientBuilder = OkHttpClient
             .Builder()
             .addInterceptor(authInterceptor)
-            .addInterceptor(
-                LoggingInterceptor.Builder().loggable(true).request().response().build()
-            )
 
         return Retrofit.Builder()
             .baseUrl(baseUrl)
@@ -127,9 +118,6 @@ class RetrofitProvideModule {
         val clientBuilder = OkHttpClient
             .Builder()
             .addInterceptor(authInterceptor)
-            .addInterceptor(
-                LoggingInterceptor.Builder().loggable(true).request().response().build()
-            )
 
         return Retrofit.Builder()
             .baseUrl(baseUrl)
