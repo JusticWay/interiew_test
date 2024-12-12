@@ -24,6 +24,7 @@ import androidx.fragment.app.viewModels
 import androidx.hilt.navigation.compose.hiltViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import justicway.base.hasCase
+import justicway.base.log
 import justicway.base.mvi.BaseFragment
 import justicway.base.navigateBack
 import justicway.base.nullCase
@@ -46,6 +47,7 @@ class StockFragment : BaseFragment<StockUiState, StockIntent, StockEvent, StockV
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
+        "StockFragment onCreateView".log()
         return ComposeView(requireContext()).apply {
             setContent {
                 StockView()
@@ -76,7 +78,7 @@ fun StockView() {
     Column(
         modifier = Modifier.fillMaxSize(),
     ) {
-        Text(text = "StockView" , color = Color.Yellow)
+        Text(text = "StockView" , color = Color.Blue)
         LazyColumn(
             modifier = Modifier
                 .fillMaxWidth()

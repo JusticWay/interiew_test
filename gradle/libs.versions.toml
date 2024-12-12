@@ -1,17 +1,19 @@
 [versions]
-agp = "8.7.2"
-kotlin = "2.0.0"
+agp = "8.7.3"
+hiltAndroidGradlePlugin = "2.52"
+kotlin = "2.0.21"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
-composeBom = "2024.04.01"
+composeBom = "2024.11.00"
 hilt = "2.52"
-ksp = "2.0.21-1.0.28"
+ksp = "2.1.0-1.0.29"
 hitl-compose = "1.2.0"
 navigationFragmentKtx = "2.8.4"
+navigationUiKtx = "2.7.3"
 retrofit = "2.9.0"
 coil = "2.6.0"
 okhttp3 = "4.10.0"
@@ -21,6 +23,8 @@ material = "1.12.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+
+hilt-android-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hiltAndroidGradlePlugin" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -40,7 +44,7 @@ androidx-foundation = { group = "androidx.compose.foundation", name = "foundatio
 coil-compose = { group = "io.coil-kt", name = "compose" , version = "coil" }
 okhttp3 = { group = "com.squareup.okhttp3", name = "okhttp", version = "okhttp3" }
 androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hitl-compose" }
-hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }

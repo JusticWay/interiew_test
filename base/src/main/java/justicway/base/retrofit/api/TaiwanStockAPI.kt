@@ -12,15 +12,15 @@ import retrofit2.http.GET
  */
 interface TaiwanStockAPI {
 
-    @GET("/exchangeReport/BWIBBU_ALL") //上市個股日本益比、殖利率及股價淨值比（依代碼查詢）
+    @GET("v1/exchangeReport/BWIBBU_ALL") //上市個股日本益比、殖利率及股價淨值比（依代碼查詢）
     suspend fun fetchBWIBBU_ALL(
     ): Result<List<FetchBWIBBUResponse>>
 
-    @GET("/exchangeReport/STOCK_DAY_AVG_ALL") // 上市個股日收盤價及月平均價
+    @GET("v1/exchangeReport/STOCK_DAY_AVG_ALL") // 上市個股日收盤價及月平均價
     suspend fun fetchStockDailyAvg(
     ): Result<List<FetchStockDailyAvgResponse>>
 
-    @GET("/exchangeReport/STOCK_DAY_ALL") // 上市個股日成交資訊
+    @GET("v1/exchangeReport/STOCK_DAY_ALL") // 上市個股日成交資訊
     suspend fun fetchStockDaily(
     ): Result<List<FetchStockDailyResponse>>
 

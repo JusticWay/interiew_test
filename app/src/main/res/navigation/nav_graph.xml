@@ -10,5 +10,9 @@
         android:label="MainFragment">
     </fragment>
 
+    <fragment
+        android:id="@+id/sampleFragment"
+        android:name="justicway.interview_cathaybk.ui.currency.SampleFragment"
+        android:label="Sample Fragment" />
 
 </navigation>
