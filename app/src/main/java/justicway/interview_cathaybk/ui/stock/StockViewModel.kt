@@ -53,6 +53,7 @@ class StockViewModel @Inject constructor(
             is StockIntent.OnCancelFilterOption -> {
                 _uiState.update {
                     it.copy(
+                        isShowFilterOption = false,
                         filterList = null
                     )
                 }
