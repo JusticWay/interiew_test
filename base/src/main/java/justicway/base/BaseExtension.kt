@@ -57,21 +57,21 @@ fun Any?.log(tag: String = "JustWay", lv: Int = 1): Any? {
     return this
 }
 
-// null entity
+
+// hasCase: 當 `this` 不為 null，執行 block，然後回傳 `this`
+inline fun <T> T?.hasCase(block: (T) -> Unit): T? {
+    return this?.also(block)
+}
+
+// nullCase: 當 `this` 為 null，執行 block，然後回傳 `this`
 inline fun <T> T?.nullCase(block: () -> Unit): T? {
     if (this == null) block()
-    return this@nullCase
+    return this
 }
 
-// has entity
-inline fun <T> T?.hasCase(block: (T) -> Unit): T? {
-    this?.let(block)
-    return this@hasCase
-}
-
-// get entity or default
-fun <T> T?.default(defaultValue: T): T {
-    return this ?: defaultValue
+// default: 當 `this` 為 null，執行 `block()` 並回傳 `block()` 的結果
+inline fun <T> T?.default(block: () -> T): T {
+    return this ?: block()
 }
 
 fun Fragment?.navigateBack(): Unit {
