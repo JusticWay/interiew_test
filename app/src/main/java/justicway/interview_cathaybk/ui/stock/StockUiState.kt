@@ -4,6 +4,9 @@ import android.app.Dialog
 import justicway.base.mvi.UiState
 import justicway.base.pojo.StockDailyInfoBO
 
+/**
+ * 定義View該有的參考值 (ViewObject)
+ */
 data class StockUiState(
     val isLoading: Boolean,
     val stockList: List<StockDailyInfoBO> = emptyList(),

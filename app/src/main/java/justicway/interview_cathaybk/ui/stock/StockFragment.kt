@@ -88,11 +88,16 @@ class StockFragment : BaseFragment<StockUiState, StockIntent, StockEvent, StockV
                  context.toast(uiEvent.message)
             }
 
+            is StockEvent.RequirePermission->{
+                // todo
+            }
+
         }
     }
 
     override fun onUiStateChanged(uiState: StockUiState) {
-        //TODO("Not yet implemented")
+        // 如完全遵守MVI 則不該用到此處
+        // TODO("混合 Xml UI ")
     }
 
     override fun onCreateView(

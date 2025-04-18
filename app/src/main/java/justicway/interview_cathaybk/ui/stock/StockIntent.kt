@@ -3,6 +3,9 @@ package justicway.interview_cathaybk.ui.stock
 import justicway.base.mvi.UiIntent
 import justicway.base.pojo.StockDailyInfoBO
 
+/**
+ *  定義該有的 User Action/Intent
+ */
 sealed class StockIntent : UiIntent {
     data object OnClickNavigateBack : StockIntent()
     // Search

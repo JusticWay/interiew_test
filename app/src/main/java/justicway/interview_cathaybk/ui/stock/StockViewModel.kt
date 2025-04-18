@@ -14,6 +14,15 @@ class StockViewModel @Inject constructor(
 ) :
     BaseViewModel<StockUiState, StockIntent, StockEvent>(StockUiState.initial) {
 
+//    init {
+//        fetchStock()
+//    }
+
+    // 理論上不該給外部直接call
+    fun initial() {
+        fetchStock()
+    }
+
     override suspend fun handleIntent(intent: StockIntent) {
         when (intent) {
             is StockIntent.OnClickNavigateBack -> {
@@ -106,10 +115,6 @@ class StockViewModel @Inject constructor(
             }
 
         }
-    }
-
-    fun initial() {
-        fetchStock()
     }
 
     private fun fetchStock() {

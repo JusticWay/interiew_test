@@ -69,9 +69,8 @@ inline fun <T> T?.nullCase(block: () -> Unit): T? {
     return this
 }
 
-// default: 當 `this` 為 null，執行 `block()` 並回傳 `block()` 的結果
-inline fun <T> T?.default(block: () -> T): T {
-    return this ?: block()
+inline fun <T> T?.default(value: T): T {
+    return this ?: value
 }
 
 fun Fragment?.navigateBack(): Unit {
@@ -112,9 +111,9 @@ fun String?.safeToDouble(): Double {
 
 fun String?.safeToLong(): Long {
     return try {
-        this?.toLong() ?: 0
+        this?.toLong() ?: 0L
     } catch (e: NumberFormatException) {
-        0
+        0L
     }
 }
 
